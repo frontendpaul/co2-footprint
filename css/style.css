@@ -1,0 +1,85 @@
+:root {
+  --primary: #2CF27C;
+  --primary-text: #101617;
+  /* --primary-text: #1C1C1C; */
+  --secondary-text: #90999C;
+  --white: #FFFFFF;
+  --primary-grey: #F7F8FA;
+  --secondary-grey: #ECECEC;
+  --main-offset-vertical: 60px;
+  --main-offset-horizontal: 30px;
+  --offset: 20px;
+  --vh: 1vh;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--primary-text);
+  line-height: 1.2;
+}
+
+body {
+  margin: 0;
+  background-color: var(--primary-grey);
+}
+
+.siema {
+  margin: auto;
+}
+
+.slide {
+  width: 100%;
+  height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+  height: calc(var(--vh, 1vh) * 100);
+  padding: 30px;
+}
+
+.hero-slide {  
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.bg {
+  position: absolute;
+}
+
+.bg--hero {
+  width: calc(78.41 * var(--vh));
+  height: calc(158.92 * var(--vh));
+  background: url(../assets/asset2.svg) no-repeat;
+  position: absolute;
+  top: -300px;
+  left: 0;
+  z-index: -2;
+}
+
+.title {
+  font-size: 4rem;
+  margin-bottom: 1.5em;
+}
+
+.btn {
+  cursor: pointer;
+  width: 48%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  background: var(--primary);
+  border-radius: 12px;
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.btn-large {
+  width: 100%;
+  box-shadow: 0px 8px 16px rgba(44, 242, 124, 0.25);
+}
