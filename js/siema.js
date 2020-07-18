@@ -9,6 +9,7 @@ class MySiema extends Siema {
 const mySiemaInstance = new MySiema({
   easing: "cubic-bezier(0.76, 0, 0.24, 1)",
   duration: 500,
+  draggable: false,
   onChange: function() {
     this.handleBottomNav();
   }

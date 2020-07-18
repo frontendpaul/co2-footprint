@@ -3,13 +3,14 @@
   --primary__dark: #0EDD62;
   --primary-text: #101617;
   /* --primary-text: #1C1C1C; */
-  --secondary-text: #90999C;
+  --secondary-text: #737A7D;
   --white: #FFFFFF;
   --primary-grey: #F5F6FA;
   --secondary-grey: #E4EAEC;
-  --main-offset-vertical: calc(var(--vh) * 6);
+  --main-offset-top: calc(var(--vh) * 9);
+  --main-offset-bottom: calc(var(--vh) * 6);
   --main-offset-horizontal: 30px;
-  --offset: 20px;
+  --offset: 24px;
   --vh: 1vh;
 }
 
@@ -29,7 +30,7 @@ body {
   background-color: var(--primary-grey);
 }
 
-p {
+p, h1, h2 {
   margin: 0;
 }
 
@@ -41,7 +42,7 @@ p {
   width: 100%;
   height: 100vh; /* Fallback for browsers that do not support Custom Properties */
   height: calc(var(--vh, 1vh) * 100);
-  padding: var(--main-offset-vertical) var(--main-offset-horizontal);
+  padding: var(--main-offset-top) var(--main-offset-horizontal) 160px;
   overflow-x: hidden;
   background: var(--white);
   position: relative;
@@ -53,6 +54,7 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  padding-bottom: var(--main-offset-bottom);
 }
 
 .hero-slide__1 {
@@ -65,13 +67,13 @@ p {
 }
 
 .slide-bg {
-  width: calc(149.02 * var(--vh));
-  height: calc(59.04 * var(--vh));
+  width: 1075px;
+  height: 265px;
   position: absolute;
   z-index: -2;
-  left: calc(-16.49 * var(--vh));
-  top: -20px;
-  background: var(--white) url(../assets/asset3.svg) no-repeat;
+  left: -120px;
+  top: 0px;
+  background: var(--white) url(../assets/asset4.svg) no-repeat;
 }
 
 .title {
@@ -118,6 +120,9 @@ p {
 
 .btn-form {
   height: 38px;
+  font-size: 1rem;
+  border-radius: 8px;
+  min-width: 120px;
 }
 
 .btn-small {
@@ -167,7 +172,7 @@ p {
 
 .bottom-nav {
   width: 100vw;
-  padding: var(--offset) var(--main-offset-horizontal) var(--main-offset-vertical);
+  padding: var(--offset) var(--main-offset-horizontal) var(--main-offset-bottom);
   background: var(--white);
   border-radius: 20px 20px 0 0;
   box-shadow: 0px -10px 20px rgba(0, 0, 0, 0.1);
@@ -183,4 +188,129 @@ p {
   visibility: visible;
   transform: translateY(0);
   transition: transform 0.2s ease 0.3s;
+}
+
+.form-group {
+  margin-top: var(--offset);
+}
+
+label {
+  color: var(--secondary-text);
+  display: block;
+  margin-bottom: 1rem;
+}
+
+input,
+select {
+  width: 100%;
+  height: 36px;
+  border: 0;
+  color: var(--primary-text);
+  background: var(--primary-grey);
+  border-radius: 8px;
+  padding: 0 1rem;
+}
+
+input:focus,
+select:focus {
+  outline: 0;
+  box-shadow: 0 0 0 2px #DEE6E8;
+  transition: box-shadow .2s ease-in;
+}
+
+input:invalid {
+  background: #F19D98;
+  box-shadow: 0 0 0 2px #EE4F44;
+}
+
+input[type="radio"] {
+  visibility: hidden;
+	width: 0;
+  height: 0;
+}
+input[type="radio"] + label {
+  margin: 0;
+}
+
+input[type="radio"]:checked + label {
+  color: var(--white);
+  background: var(--primary);
+  box-shadow: 0px 8px 16px rgba(44, 242, 124, 0.25);
+  transition: background 0s;
+}
+
+input[type="radio"]:checked + label:hover {
+  background: var(--primary__dark);
+  transition: background .2s ease-in;
+}
+
+.slider {
+  height: 66px;
+  margin-left: -1rem;
+  margin-bottom: -30px;
+  display: flex;
+  justify-content: space-between;
+  min-width: 100vw;
+  overflow-x: auto;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.slider::-webkit-scrollbar {
+  display: none;
+}
+
+.slider-item {
+  position: relative;
+  min-width: 120px;
+  margin-right: 1rem;
+}
+
+.slider-item:first-of-type {
+  margin-left: 1rem;
+}
+
+.slider-item.is-hidden {
+  min-width: 46px;
+}
+
+.slider-item > .btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.radio-select-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-left: -8px;
+}
+
+.devider {
+  margin: var(--offset) 0;
+  width: 100%;
+  height: 2px;
+  background: var(--secondary-grey);
+}
+
+.sum {
+  display: flex;
+  justify-content: space-between;
+  margin-top: var(--offset);
+}
+
+.sum-value {
+  font-weight: 500;
+}
+
+
+/* IPhone SE fix */
+@media(max-width: 370px) {
+  .title {
+    font-size: 3.5rem;
+  }
+
+  .body-text {
+    font-size: 1rem;
+  }
 }
