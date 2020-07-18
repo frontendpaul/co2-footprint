@@ -7,8 +7,8 @@
   --white: #FFFFFF;
   --primary-grey: #F5F6FA;
   --secondary-grey: #E4EAEC;
-  --main-offset-top: calc(var(--vh) * 9);
-  --main-offset-bottom: calc(var(--vh) * 6);
+  --main-offset-top: 60px;
+  --main-offset-bottom: 40px;
   --main-offset-horizontal: 30px;
   --offset: 24px;
   --vh: 1vh;
@@ -209,6 +209,16 @@ select {
   background: var(--primary-grey);
   border-radius: 8px;
   padding: 0 1rem;
+}
+
+select {
+  background: var(--primary-grey) url(../assets/pointer.svg) right 7px top 50% no-repeat;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+select::-ms-expand {
+  display: none;
 }
 
 input:focus,
