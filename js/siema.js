@@ -1,9 +1,14 @@
-new Siema();
-
-let vh = window.innerHeight * 0.01;
-document.documentElement.style.setProperty('--vh', `${vh}px`);
-
-window.addEventListener('resize', () => {
-  let vh = window.innerHeight * 0.01;
-  document.documentElement.style.setProperty('--vh', `${vh}px`);
+const mySiema = new Siema({
+  easing: "cubic-bezier(0.76, 0, 0.24, 1)",
+  duration: 500
 });
+
+// Controls
+const prevBtns = document.querySelectorAll(".prev");
+const nextBtns = document.querySelectorAll(".next");
+for (const prevBtn of prevBtns) {
+  prevBtn.addEventListener("click", () => mySiema.prev());
+}
+for (const nextBtn of nextBtns) {
+  nextBtn.addEventListener("click", () => mySiema.next());
+}
