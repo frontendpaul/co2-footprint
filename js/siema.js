@@ -5,8 +5,9 @@ class MySiema extends Siema {
     document.querySelector(".bottom-nav").classList[addOrRemove]("is-visible");
   }
 
+  
+  _currrentViewWidth = window.innerWidth;
   resizeHandler() {
-    _currrentViewWidth = window.innerWidth;
     // This is used to prevent the resize handler firing when the 
     // Android keyboard pops up.
     if(Math.abs(window.innerWidth - this._currrentViewWidth) === 0) {
