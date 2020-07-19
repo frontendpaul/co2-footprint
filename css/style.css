@@ -2,7 +2,6 @@
   --primary: #2CF27C;
   --primary__dark: #0EDD62;
   --primary-text: #101617;
-  /* --primary-text: #1C1C1C; */
   --secondary-text: #737A7D;
   --white: #FFFFFF;
   --primary-grey: #F5F6FA;
@@ -118,15 +117,9 @@ p, h1, h2 {
   transition: all .2s ease-in;
 }
 
-.btn-form {
-  height: 38px;
-  font-size: 1rem;
-  border-radius: 8px;
-  min-width: 120px;
-}
-
 .btn-small {
-  width: 120px;
+  height: 38px;
+  border-radius: 8px;
 }
 
 .btn-large {
@@ -209,6 +202,7 @@ select {
   background: var(--primary-grey);
   border-radius: 8px;
   padding: 0 1rem;
+  font-size: 1.15rem;
 }
 
 select {
@@ -250,8 +244,8 @@ input[type="radio"]:checked + label {
 }
 
 input[type="radio"]:checked + label:hover {
-  background: var(--primary__dark);
-  transition: background .2s ease-in;
+  /* background: var(--primary__dark);
+  transition: background .2s ease-in; */
 }
 
 .slider {
@@ -270,9 +264,13 @@ input[type="radio"]:checked + label:hover {
   display: none;
 }
 
+.slider .btn {  
+  width: 130px;
+}
+
 .slider-item {
   position: relative;
-  min-width: 120px;
+  min-width: 130px;
   margin-right: 1rem;
 }
 
@@ -281,7 +279,7 @@ input[type="radio"]:checked + label:hover {
 }
 
 .slider-item.is-hidden {
-  min-width: 46px;
+  min-width: 30px;
 }
 
 .slider-item > .btn {
@@ -299,7 +297,7 @@ input[type="radio"]:checked + label:hover {
 .devider {
   margin: var(--offset) 0;
   width: 100%;
-  height: 2px;
+  height: 1px;
   background: var(--secondary-grey);
 }
 

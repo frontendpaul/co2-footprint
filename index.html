@@ -30,15 +30,15 @@
           <div class="slider">
             <div class="slider-item">
               <input type="radio" name="house-type" id="house">
-              <label for="house" class="btn btn-secondary btn-form">House</label>
+              <label for="house" class="btn btn-secondary btn-small">House</label>
             </div>
             <div class="slider-item">
               <input type="radio" name="house-type" id="townhouse">
-              <label for="townhouse" class="btn btn-secondary btn-form">Townhouse</label>
+              <label for="townhouse" class="btn btn-secondary btn-small">Townhouse</label>
             </div>
             <div class="slider-item">
               <input type="radio" name="house-type" id="appartment">
-              <label for="appartment" class="btn btn-secondary btn-form">Appartment</label>
+              <label for="appartment" class="btn btn-secondary btn-small">Appartment</label>
             </div>
             <div class="slider-item is-hidden"></div>
           </div>
@@ -70,12 +70,12 @@
         </div>
 
         <div class="form-group">
-          <label for="consumption-known">Annual consumption known?</label>
+          <label for="heating-consumption-known">Annual consumption known?</label>
           <div class="radio-select-wrapper">
-            <input type="radio" name="consumption-known" id="known-yes" checked>
-            <label for="known-yes" class="btn btn-secondary btn-form">Yes</label>
-            <input type="radio" name="consumption-known" id="known-no">
-            <label for="known-no" class="btn btn-secondary btn-form">No</label>
+            <input type="radio" name="heating-consumption-known" id="heating-known-yes" checked>
+            <label for="heating-known-yes" class="btn btn-secondary btn-small">Yes</label>
+            <input type="radio" name="heating-consumption-known" id="heating-known-no">
+            <label for="heating-known-no" class="btn btn-secondary btn-small">No</label>
           </div>
         </div>
 
@@ -84,20 +84,80 @@
           <input type="number" name="heating-consumption" id="heating-consumption" min="0" max="500000">
         </div>
 
-        <div class="devider"></div>
-
-        <div class="sum">
-          <p class="sum-label">CO² emissions from heating</p>
-          <span class="sum-value">0</span>
-        </div>
-
-        <div class="sum">
-          <p class="sum-label">Preliminary total CO² emissions</p>
-          <span class="sum-value">4.32 tons</span>
+        <div class="summary">
+          <div class="devider"></div>
+  
+          <div class="sum">
+            <p class="sum-label">CO² emissions from heating</p>
+            <span class="sum-value">0</span>
+          </div>
+  
+          <div class="sum">
+            <p class="sum-label">Preliminary total CO² emissions</p>
+            <span class="sum-value">4.32 tons</span>
+          </div>
         </div>
       </div>
 
-      <div class="slide"></div>
+      <div class="slide">
+        <div class="slide-bg"></div>
+        <h2 class="slide-title">Electricity</h2>
+
+        <div class="form-group">
+          <label for="no-of-people-2">Number of people in the household</label>
+          <input type="number" name="no-of-people" id="no-of-people-2" min="1" max="10">
+        </div>
+
+        <div class="form-group">
+          <label for="electricity-type">Type of electricity</label>
+          <div class="radio-select-wrapper">
+            <input type="radio" name="electricity-type" id="known-yes" checked>
+            <label for="known-yes" class="btn btn-secondary btn-small">Mixed</label>
+            <input type="radio" name="electricity-type" id="known-no">
+            <label for="known-no" class="btn btn-secondary btn-small">Green</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="electricity-consumption-known">Annual consumption known?</label>
+          <div class="radio-select-wrapper">
+            <input type="radio" name="electricity-consumption-known" id="electricity-known-yes" checked>
+            <label for="electricity-known-yes" class="btn btn-secondary btn-small">Yes</label>
+            <input type="radio" name="electricity-consumption-known" id="electricity-known-no">
+            <label for="electricity-known-no" class="btn btn-secondary btn-small">No</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="electricity-consumption">Annual consumption</label>
+          <input type="number" name="electricity-consumption" id="electricity-consumption" min="0" max="500000">
+        </div>
+
+        <div class="summary">
+          <div class="devider"></div>
+  
+          <div class="sum">
+            <p class="sum-label">CO² emissions from heating</p>
+            <span class="sum-value">0</span>
+          </div>
+  
+          <div class="sum">
+            <p class="sum-label">Preliminary total CO² emissions</p>
+            <span class="sum-value">4.32 tons</span>
+          </div>
+        </div>
+
+      </div>
+      
+      <div class="slide">
+
+      </div>
+      <div class="slide">
+
+      </div>
+      <div class="slide">
+
+      </div>
     </div>
     <div class="bottom-nav">
       <div class="btn-wrapper">
