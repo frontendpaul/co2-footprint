@@ -137,7 +137,7 @@
           <div class="devider"></div>
   
           <div class="sum">
-            <p class="sum-label">CO² emissions from heating</p>
+            <p class="sum-label">CO² emissions from power consumption</p>
             <span class="sum-value">0</span>
           </div>
   
@@ -150,15 +150,62 @@
       </div>
       
       <div class="slide">
+        <div class="slide-bg"></div>
+        <h2 class="slide-title">Transportation</h2>
 
+        <div class="form-group">
+          <label for="no-of-cars">How many cars do you have?</label>
+          <input type="number" name="no-of-cars" id="no-of-cars" min="0" max="10" value="0">
+        </div>
+
+        <div class="form-group is-hidden" id="js-units">
+          <label for="units">Prefered units</label>
+          <div class="radio-select-wrapper">
+            <input type="radio" name="units" id="metric" checked>
+            <label for="metric" class="btn btn-secondary btn-small">Metric</label>
+            <input type="radio" name="units" id="imperial">
+            <label for="imperial" class="btn btn-secondary btn-small">Imperial</label>
+          </div>
+        </div>
+
+        <div class="car-forms"></div>
+
+        <div class="summary">
+          <div class="devider"></div>
+  
+          <div class="sum">
+            <p class="sum-label">CO² emissions from driving</p>
+            <span class="sum-value">0</span>
+          </div>
+  
+          <div class="sum">
+            <p class="sum-label">Preliminary total CO² emissions</p>
+            <span class="sum-value">4.32 tons</span>
+          </div>
+        </div>
       </div>
-      <div class="slide">
 
+      <div class="slide">
+        <div class="slide-bg"></div>
+        <h2 class="slide-title">Electricity</h2>
       </div>
-      <div class="slide">
 
+      <div class="slide">
+        <div class="slide-bg"></div>
+        <h2 class="slide-title">Electricity</h2>
+      </div>
+
+      <div class="slide">
+        <div class="slide-bg"></div>
+        <h2 class="slide-title">Electricity</h2>
+      </div>
+
+      <div class="slide">
+        <div class="slide-bg"></div>
+        <h2 class="slide-title">Electricity</h2>
       </div>
     </div>
+
     <div class="bottom-nav">
       <div class="btn-wrapper">
         <div class="btn btn__outline prev">Back</div>
@@ -168,7 +215,8 @@
   </div>
   
 
-  <script src="./js/index.js"></script>
   <script src="./js/siema.js"></script>
+  <script src="./js/cars.js"></script>
+  <script src="./js/index.js"></script>
 </body>
 </html>
