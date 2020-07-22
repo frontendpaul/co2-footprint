@@ -25,7 +25,7 @@
       <div class="slide">
         <div class="slide-bg"></div>
         <h2 class="slide-title">Heating</h2>
-        <div class="form-group">
+        <!-- <div class="form-group">
           <label for="house-type">What type of house do you live in?</label>
           <div class="slider">
             <div class="slider-item">
@@ -40,7 +40,20 @@
               <input type="radio" name="house-type" id="appartment">
               <label for="appartment" class="btn btn-secondary btn-small">Appartment</label>
             </div>
-            <div class="slider-item is-hidden"></div>
+            <div class="slider-item is-invisible"></div>
+          </div>
+        </div> -->
+
+        <div class="form-group">
+          <label for="house-type">What type of house do you live in?</label>
+          <div class="slider">
+            <input type="radio" name="house-type" id="house">
+            <label for="house" class="btn btn-secondary btn-small">House</label>
+            <input type="radio" name="house-type" id="townhouse">
+            <label for="townhouse" class="btn btn-secondary btn-small">Townhouse</label>
+            <input type="radio" name="house-type" id="appartment">
+            <label for="appartment" class="btn btn-secondary btn-small">Appartment</label>      
+            <div class="slider-item is-invisible"></div>
           </div>
         </div>
 
@@ -187,7 +200,59 @@
 
       <div class="slide">
         <div class="slide-bg"></div>
-        <h2 class="slide-title">Electricity</h2>
+        <h2 class="slide-title">Flights</h2>
+
+        <div class="form-group">
+          <label for="flights-europe">Flights Europe (hours / year)</label>
+          <input type="number" name="flights-europe" id="flights-europe" min="0" max="1000" value="0">
+        </div>
+        
+
+        <div class="form-group">
+          <label for="flight-type-europe">Flight class</label>
+          <div class="slider">
+            <input type="radio" name="flight-type-europe" id="economy">
+            <label for="economy" class="btn btn-secondary btn-small">Economy</label>
+            <input type="radio" name="flight-type-europe" id="business">
+            <label for="business" class="btn btn-secondary btn-small">Business</label>
+            <input type="radio" name="flight-type-europe" id="first">
+            <label for="first" class="btn btn-secondary btn-small">First</label>      
+            <div class="slider-item is-invisible"></div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="flights-europe">Flights Transcontinental (hours / year)</label>
+          <input type="number" name="flights-europe" id="flights-europe" min="0" max="1000" value="0">
+        </div>
+        
+
+        <div class="form-group">
+          <label for="flight-type-transcontinental">Flight class</label>
+          <div class="slider">
+            <input type="radio" name="flight-type-transcontinental" id="economy">
+            <label for="economy" class="btn btn-secondary btn-small">Economy</label>
+            <input type="radio" name="flight-type-transcontinental" id="business">
+            <label for="business" class="btn btn-secondary btn-small">Business</label>
+            <input type="radio" name="flight-type-transcontinental" id="first">
+            <label for="first" class="btn btn-secondary btn-small">First</label>      
+            <div class="slider-item is-invisible"></div>
+          </div>
+        </div>
+
+        <div class="summary">
+          <div class="devider"></div>
+  
+          <div class="sum">
+            <p class="sum-label">CO² emissions from flights</p>
+            <span class="sum-value">0</span>
+          </div>
+  
+          <div class="sum">
+            <p class="sum-label">Preliminary total CO² emissions</p>
+            <span class="sum-value">4.32 tons</span>
+          </div>
+        </div>
       </div>
 
       <div class="slide">

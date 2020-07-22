@@ -90,7 +90,6 @@ p, h1, h2, h3 {
 }
 
 .body-text {
-  font-size: .875rem;
   line-height: 1.5;
   margin-bottom: calc(var(--vh) * 15);
 }
@@ -120,7 +119,7 @@ p, h1, h2, h3 {
   font-weight: 600;
   box-shadow: none;
   transition: all .2s ease-in;
-  padding: 0 2rem;
+  padding: 0 1.5rem;
 }
 
 .btn-small {
@@ -166,7 +165,7 @@ p, h1, h2, h3 {
 }
 
 .next {
-  box-shadow: 0px 8px 16px rgba(44, 242, 124, 0.25);  
+  box-shadow: 0px 8px 16px rgba(44, 242, 124, 0.4);  
 }
 
 .bottom-nav {
@@ -241,6 +240,7 @@ input[type="radio"] {
   visibility: hidden;
 	width: 0;
   height: 0;
+  position: absolute;
 }
 input[type="radio"] + label {
   margin: 0;
@@ -258,14 +258,47 @@ input[type="radio"]:checked + label:hover {
   transition: background .2s ease-in; */
 }
 
-.slider {
+/* .slider {
   height: 66px;
-  margin-left: -1rem;
+  position: relative;
+  margin-left: -.5rem;
   margin-bottom: -30px;
   display: flex;
   justify-content: space-between;
   min-width: 100vw;
   overflow-x: auto;
+  -ms-overflow-style: none;
+}
+
+.slider::-webkit-scrollbar {
+  display: none;
+}
+
+.slider .btn {  
+  width: 125px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.slider-item {
+  position: relative;
+  min-width: 125px;
+  margin-right: 0.5rem;
+}
+
+.slider-item:first-of-type {
+  margin-left: 0.5rem;
+} */
+
+.slider-item.is-invisible {
+  min-width: 40px;
+}
+
+.slider {
+  display: flex;
+  width: 100vw;
+  overflow-x: scroll;
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
@@ -274,34 +307,16 @@ input[type="radio"]:checked + label:hover {
   display: none;
 }
 
-.slider .btn {  
-  width: 140px;
-}
-
-.slider-item {
-  position: relative;
-  min-width: 140px;
+.slider .btn {
+  width: auto;
+  flex-shrink: 0;
+  min-width: 0;
   margin-right: 1rem;
-}
-
-.slider-item:first-of-type {
-  margin-left: 1rem;
-}
-
-.slider-item.is-hidden {
-  min-width: 30px;
-}
-
-.slider-item > .btn {
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 
 .radio-select-wrapper {
   display: flex;
   justify-content: space-between;
-  margin-left: -8px;
 }
 
 .devider {
