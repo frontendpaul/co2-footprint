@@ -17,7 +17,7 @@ const renderCars = function() {
   
       <div class="form-group">
         <label for="car-type">Type of car</label>
-        <select name="car-type" id="car-type">
+        <select name="car-type" id="car-type-car${i}">
           <option value="compact">Compact</option>
           <option value="sedan">Sedan / Saloon</option>
           <option value="wagon">Wagon / Estate</option>
@@ -33,7 +33,7 @@ const renderCars = function() {
   
       <div class="form-group">
         <label for="fuel-type">Fuel</label>
-        <select name="fuel-type" id="fuel-type">
+        <select name="fuel-type" id="fuel-type-car${i}">
           <option value="gas">Gas</option>
           <option value="diesel">Diesel</option>
           <option value="compressed">Comressed Natural Gas</option>
@@ -44,23 +44,23 @@ const renderCars = function() {
       </div>
   
       <div class="form-group">
-        <label for="fuel-economy-known">Fuel economy known?</label>
+        <label for="fuel-economy-known-car${i}">Fuel economy known?</label>
         <div class="radio-select-wrapper">
-          <input type="radio" name="fuel-economy-known" id="fuel-economy-known-yes" checked>
-          <label for="fuel-economy-known-yes" class="btn btn-secondary btn-small">Yes</label>
-          <input type="radio" name="fuel-economy-known" id="fuel-economy-known-no">
-          <label for="fuel-economy-known-no" class="btn btn-secondary btn-small">No</label>
+          <input type="radio" name="fuel-economy-known-car${i}" id="fuel-economy-known-yes-car${i}" checked>
+          <label for="fuel-economy-known-yes-car${i}" class="btn btn-secondary btn-small">Yes</label>
+          <input type="radio" name="fuel-economy-known-car${i}" id="fuel-economy-known-no-car${i}">
+          <label for="fuel-economy-known-no-car${i}" class="btn btn-secondary btn-small">No</label>
         </div>
       </div>
   
       <div class="form-group">
-        <label for="electricity-consumption">Average fuel economy</label>
-        <input type="number" name="electricity-consumption" id="electricity-consumption" min="0" max="200" step=".1">
+        <label for="avg-fuel-economy">Average fuel economy</label>
+        <input type="number" name="avg-fuel-economy" id="avg-fuel-economy-car${i}" min="0" max="200" step=".1">
       </div>
   
       <div class="form-group">
-        <label for="electricity-consumption">Annual kilometrage</label>
-        <input type="number" name="electricity-consumption" id="electricity-consumption" min="0" max="1000000" value="13600">
+        <label for="fuel-economy">Annual kilometrage</label>
+        <input type="number" name="fuel-economy" id="fuel-economy-car${i}" min="0" max="1000000" value="13600">
       </div>
       `
       carsContainer.appendChild(car);

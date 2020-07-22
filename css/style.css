@@ -292,12 +292,17 @@ input[type="radio"]:checked + label:hover {
 } */
 
 .slider-item.is-invisible {
-  min-width: 40px;
+  min-width: 15px;
 }
 
 .slider {
-  display: flex;
   width: 100vw;
+  height: 58px;
+  margin-bottom: -20px;
+  position: relative;
+  left: calc(-1 * var(--main-offset-horizontal));
+  padding-left: var(--main-offset-horizontal);
+  display: flex;
   overflow-x: scroll;
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
