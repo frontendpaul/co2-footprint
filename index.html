@@ -257,7 +257,120 @@
 
       <div class="slide">
         <div class="slide-bg"></div>
-        <h2 class="slide-title">Electricity</h2>
+        <h2 class="slide-title">Nutrition</h2>
+
+        <div class="form-group">
+          <label for="gender">Gender</label>
+          <div class="slider">
+            <input type="radio" name="gender" id="female">
+            <label for="female" class="btn btn-secondary btn-small">Female</label>
+            <input type="radio" name="gender" id="male">
+            <label for="male" class="btn btn-secondary btn-small">Male</label>
+            <input type="radio" name="gender" id="otehr-gender">
+            <label for="otehr-gender" class="btn btn-secondary btn-small">Other</label>      
+            <div class="slider-item is-invisible"></div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="weight">Weight (kg)</label>
+          <input type="number" name="weight" id="weight" min="0" max="1000">
+        </div>
+
+        <div class="form-group">
+          <label for="age">Age</label>
+          <select name="age" id="age">
+            <option value="17">Under 17 years</option>
+            <option value="18">18 - 29 years</option>
+            <option value="30">30 - 59 years</option>
+            <option value="60">60+ years</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="activity">Activity</label>
+          <select name="activity" id="activity">
+            <option value="inactiv">Very inactiv</option>
+            <option value="low">Low-motion activities</option>
+            <option value="light">Light physical activities</option>
+            <option value="hard">Hard physical activities</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="sport">Sport</label>
+          <select name="sport" id="sport">
+            <option value="none">None</option>
+            <option value="little">Little</option>
+            <option value="alot">A lot</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="nutrition-type">Type of nutrition</label>
+          <select name="nutrition-type" id="nutrition-type">
+            <option value="vegan">Vegan</option>
+            <option value="vegetarian">Vegetarian</option>
+            <option value="meat-reduced">Meat-reduced</option>
+            <option value="mixed" selected>Mixed</option>
+            <option value="meat-emphasized">Meat-emphasized</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="regional-products">Regional products</label>
+          <select name="regional-products" id="regional-products">
+            <option value="exclusive">Exclusive</option>
+            <option value="majority">Majority</option>
+            <option value="partialy" selected>Partialy</option>
+            <option value="little">A little</option>
+            <option value="none">Often not regional</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="seasonal-products">Seasonal products</label>
+          <select name="seasonal-products" id="seasonal-products">
+            <option value="exclusive">Exclusive</option>
+            <option value="majority">Majority</option>
+            <option value="mixed" selected>Mixed</option>
+            <option value="sometimes">Sometimes</option>
+            <option value="none">No consideration</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="frozen-products">Frozen food products</label>
+          <select name="frozen-products" id="frozen-products">
+            <option value="never">Never</option>
+            <option value="occasionally" selected>Occasionally</option>
+            <option value="sometimes">2-3 times a week</option>
+            <option value="daily">Daily</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="oragnic-products">Oragnic products</label>
+          <select name="oragnic-products" id="oragnic-products">
+            <option value="none">None</option>
+            <option value="partialy">Partialy</option>
+            <option value="primarily">Primarily</option>
+          </select>
+        </div>
+
+        <div class="summary">
+          <div class="devider"></div>
+  
+          <div class="sum">
+            <p class="sum-label">CO² emissions from food</p>
+            <span class="sum-value">0</span>
+          </div>
+  
+          <div class="sum">
+            <p class="sum-label">Preliminary total CO² emissions</p>
+            <span class="sum-value">4.32 tons</span>
+          </div>
+        </div>
       </div>
 
       <div class="slide">
